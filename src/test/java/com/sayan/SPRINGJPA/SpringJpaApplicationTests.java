@@ -25,4 +25,20 @@ class SpringJpaApplicationTests {
 		Assert.assertEquals(7,user.getId());
 		System.out.println("testing done!");
 	}
+	@Test
+	public void saveUserTest(){
+		System.out.println("testing save user method");
+		Student student1 = new Student(1, "arghadeep ghosh", "naihati");
+		Student user = student.saveUser(student1);
+		Assert.assertEquals("arghadeep ghosh",user.getName());
+		System.out.println("testing done!");
+	}
+	@Test
+	public void updateUserTest(){
+		System.out.println("testing update user method");
+		Student student1 = new Student(9, "arghadeep ghosh", "ranaghat");
+		Student user = student.updateUser(student1);
+		Assert.assertEquals("ranaghat",user.getAddress());
+		System.out.println("testing done!");
+	}
 }
